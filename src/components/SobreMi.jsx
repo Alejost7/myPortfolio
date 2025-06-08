@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 export default function SobreMi() {
     return (
         <section
-        id="about"
-        className="flex flex-col items-center bg-[#0f0f1f] text-white py-16 px-6 md:py-24"
+        id="sobre-mi"
+        className="rounded-lg flex flex-col items-center bg-[#0f0f1f] bg-opacity-30 text-white py-6 px-6 max-w-6xl mx-auto mt-12"
         >
         <motion.h2
             initial={{ opacity: 0, y: -20 }}
@@ -30,12 +30,12 @@ export default function SobreMi() {
             </p>
 
             <div>
-                <h3 className="text-2xl font-semibold mb-4">Habilidades</h3>
-                <ul className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                <h3 className="text-2xl font-semibold mb-8">Habilidades</h3>
+                <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {["JavaScript", "React", "Node.js", "Python", "Git", "SQL"].map((skill) => (
                     <li
                     key={skill}
-                    className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm inline-block"
+                    className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm inline-block hover:bg-white/20 transition cursor-pointer text-center"
                     >
                     {skill}
                     </li>

@@ -14,10 +14,7 @@ export default function Navbar() {
 
     return (
         <nav className="w-full bg-gradient-to-b from-black/80 to-transparent fixed top-0 z-50 pb-4">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center text-white">
-            {/* Logo o Nombre */}
-            <h1 className="text-xl font-bold">Diego.dev</h1>
-
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center text-white">            
             {/* Desktop nav */}
             <div className="hidden md:flex gap-9 text-sm">
             {links.map((link) => (

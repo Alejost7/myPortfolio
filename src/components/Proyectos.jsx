@@ -77,7 +77,7 @@ const Proyectos = () => {
             <img
             src="/gta.jpg"
             alt="GTA V"
-            className="rounded mb-4 w-full"
+            className="rounded mb-4 w-full h-48 object-cover"
             />
             <h3 className="text-xl font-semibold">Prueba de rendimiento: GTA V</h3>
             <span className="bg-blue-700 px-2 py-1 rounded text-sm">C++</span>
