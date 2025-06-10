@@ -1,89 +1,65 @@
 import { motion } from 'framer-motion';
+import Modal from './Modal';
+import { useState } from 'react';
+import { projects } from '../data/projects';
+
+// src/data/projects.js
+
 
 const Proyectos = () => {
+    const [selected, setSelected] = useState(null);
+
     return (
         <section id="proyectos" className="mt-24 max-w-6xl mx-auto">
         <h2 className="text-3xl font-semibold mb-8">Proyectos destacados</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-        {/* CARD 1 */}
-        <motion.div 
-            className="bg-white/5 backdrop-blur-sm rounded-xl p-4 shadow hover:shadow-xl transition"
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.1 }}
-            viewport={{ once: true }}
-            >
-            <img
-            src="/vscode.png"
-            alt="Visual Studio Code"
-            className="rounded mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">Aplicación Web Intercambio de Libros</h3>
-            <span className="bg-blue-600 px-2 py-1 rounded text-sm">React</span>
-            <span className="bg-orange-600 px-2 py-1 rounded text-sm">JavaScript</span>
-        </motion.div>
-
-        {/* CARD 2 */}
-        <motion.div 
-            className="bg-white/5 backdrop-blur-sm rounded-xl p-4 shadow hover:shadow-xl transition"
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.1 }}
-            viewport={{ once: true }}                
-            >
-            <img
-            src="/guerra.jpeg"
-            alt="Guerra Mundial Z"
-            className="rounded mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">
-            Prueba de rendimiento: Guerra Mundial Z
-            </h3>
-            <div className="flex gap-2">
-            <span className="bg-yellow-500 px-2 py-1 rounded text-sm">Python</span>
-            <span className="bg-blue-700 px-2 py-1 rounded text-sm">C++</span>
-            </div>
-        </motion.div>
-
-        {/* CARD 3 - Referencias */}
-        <motion.div 
-            className="bg-white/5 backdrop-blur-sm rounded-xl p-4 shadow hover:shadow-xl transition"
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.1 }}
-            viewport={{ once: true }}                
-            >
-            <h3 className="text-xl font-semibold mb-4">Referencias</h3>
-            <ul className="list-disc list-inside text-sm space-y-1">
-            <li>Investigaciones sobre hardware y CPU</li>
-            <li>Estudios en ingeniería</li>
-            <li>Motivación para generar ingresos y mejorar calidad de vida</li>
-            </ul>
-        </motion.div>
+        <div className="grid md:grid-cols-3 gap-16">
+            {projects.map((project) => (
+                <motion.div
+                    key={project.id}
+                    className=" rounded-lg bg-white/5 backdrop-blur-sm roundend-xl p-4 shadow hover:shadow-xl cursor-pointer "
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.2 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    onClick={() => setSelected(project)}
+                >
+                    <img src={project.img} alt={project.title} className="rounded mb-4 w-full"/>
+                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                    <div className="flex flex-wrap gap-2">
+                        {project.stack.map((tech) => (
+                            <span key= {tech} className ="bg-blue-600  px-2 py-1 rounded-lg text-sm">
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                </motion.div>
+                ))}
         </div>
 
-        {/* CARD 4 - GTA */}
-        <motion.div 
-            className="mt-6"
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            viewport={{ once: true }}                
-            >
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 shadow hover:shadow-xl transition">
-            <img
-            src="/gta.jpg"
-            alt="GTA V"
-            className="rounded mb-4 w-full h-48 object-cover"
-            />
-            <h3 className="text-xl font-semibold">Prueba de rendimiento: GTA V</h3>
-            <span className="bg-blue-700 px-2 py-1 rounded text-sm">C++</span>
-        </div>
-        </motion.div>
+        {/* Modal */}
+        <Modal isOpen={!!selected} onClose={() => setSelected(null)}>
+                {selected && (
+                    <div className="space-y-4">
+                        <img src={selected.img} alt="selected.title" className="rounded-lg w-full" />
+                        <h3 className="text-2xl font-bold">{selected.title}</h3>
+                        <p className="text-gray-300">{selected.description}</p> 
+                        {selected.link && (
+                            <>
+                                {console.log(selected.link)}
+                                <a
+                                    href={selected.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block mt-2 text-violet-400 hover:underline"
+                                >
+                                    Ver repositorio
+                                </a>
+                            </>
+                        )}
+                    </div>
+                )}
+        </Modal>            
     </section>
     );
 };
