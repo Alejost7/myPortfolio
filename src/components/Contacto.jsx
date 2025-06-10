@@ -62,7 +62,7 @@ const Contacto = () => {
             <div className="flex items-center justify-center gap-2">
             <Instagram className="text-pink-400" size={20} />
             <a
-                href="https://instagram.com/diegotuusuario"
+                href="https://www.instagram.com/alejandro._santander/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
