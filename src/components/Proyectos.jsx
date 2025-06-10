@@ -19,8 +19,9 @@ const Proyectos = () => {
             alt="Visual Studio Code"
             className="rounded mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">Código en VS Code</h3>
+            <h3 className="text-xl font-semibold mb-2">Aplicación Web Intercambio de Libros</h3>
             <span className="bg-blue-600 px-2 py-1 rounded text-sm">React</span>
+            <span className="bg-orange-600 px-2 py-1 rounded text-sm">JavaScript</span>
         </motion.div>
 
         {/* CARD 2 */}
