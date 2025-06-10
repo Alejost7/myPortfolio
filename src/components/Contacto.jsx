@@ -27,10 +27,10 @@ const Contacto = () => {
             <div className="flex items-center justify-center gap-2">
             <Mail className="text-violet-400" size={20} />
             <a
-                href="mailto:diego.tucorreo@example.com"
+                href="mailto:alejandrosantandertoto@gmail.com"
                 className="hover:underline"
             >
-                diego.tucorreo@example.com
+                alejandrosantandertoto@gmail.com
             </a>
             </div>
 

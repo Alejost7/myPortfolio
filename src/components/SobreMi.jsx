@@ -32,7 +32,7 @@ export default function SobreMi() {
             <div>
                 <h3 className="text-2xl font-semibold mb-8">Habilidades</h3>
                 <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {["JavaScript", "React", "Node.js", "Python", "Git", "SQL"].map((skill) => (
+                {["JavaScript", "React", "Node.js", "Python", "Git", "SQL","C++","C","POO"].map((skill) => (
                     <li
                     key={skill}
                     className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm inline-block hover:bg-white/20 transition cursor-pointer text-center"
