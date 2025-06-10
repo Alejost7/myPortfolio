@@ -37,10 +37,11 @@ const Contacto = () => {
             <div className="flex items-center justify-center gap-2">
             <Linkedin className="text-blue-400" size={20} />
             <a
-                href="www.linkedin.com/in/diego-alejandro-santander-toro"
+                href="https://linkedin.com/in/diego-alejandro-santander-toro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
+
             >
                 linkedin.com/in/diego
             </a>
