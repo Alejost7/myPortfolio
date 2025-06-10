@@ -67,7 +67,7 @@ const Contacto = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
             >
-                instagram.com/diegotuusuario
+                instagram.com/alejandro._santander/
             </a>
             </div>
         </div>
