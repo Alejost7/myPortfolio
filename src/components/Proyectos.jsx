@@ -24,7 +24,14 @@ const Proyectos = () => {
                     viewport={{ once: true }}
                     onClick={() => setSelected(project)}
                 >
-                    <img src={project.img} alt={project.title} className="rounded mb-4 w-full"/>
+                    {project.img.endsWith(".mp4") ? (
+                    <video className="rounded mb-4 w-full" autoPlay loop muted>
+                        <source src={project.img} type="video/mp4" />
+                        Tu navegador no soporta este video.
+                    </video>
+                    ) : (
+                    <img src={project.img} alt={project.title} className="rounded mb-4 w-full" />
+                    )}
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                     <div className="flex flex-wrap gap-2">
                         {project.stack.map((tech) => (
@@ -41,7 +48,14 @@ const Proyectos = () => {
         <Modal isOpen={!!selected} onClose={() => setSelected(null)}>
                 {selected && (
                     <div className="space-y-4">
-                        <img src={selected.img} alt="selected.title" className="rounded-lg w-full" />
+                        {selected.img.endsWith(".mp4") ? (
+                        <video className="rounded-lg w-full" autoPlay loop muted playsInline>
+                            <source src={selected.img} type="video/mp4" />
+                            Tu navegador no soporta este video.
+                        </video>
+                        ) : (
+                        <img src={selected.img} alt={selected.title} className="rounded-lg w-full" />
+                        )}
                         <h3 className="text-2xl font-bold">{selected.title}</h3>
                         <p className="text-gray-300">{selected.description}</p> 
                         {selected.link && (

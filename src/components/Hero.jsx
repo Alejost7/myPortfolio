@@ -9,7 +9,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }} 
             className="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto">
             <img
-            src="/diego-profile.jpg"
+            src="/foton.jpg"
             alt="Diego"
             className="rounded-lg w-auto h-72 object-cover border-4 border-violet-500"
             />

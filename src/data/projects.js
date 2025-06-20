@@ -9,21 +9,21 @@ export const projects = [
         link: "https://github.com/Alejost7/Book-Trading",
     },
     {
-        id: "zombie-bench",
-        title: "Bench: Guerra Mundial Z",
-        img: "/guerra.jpeg",
-        stack: ["Python", "C++"],
+        id: "makeUp",
+        title: "Pagina Web de Maquillaje",
+        img: "/imagenMakeUp.png",
+        stack: ["HTML", "CSS", "JavaScript"],
         description:
-            "Pruebas de rendimiento y análisis de temperaturas jugando Guerra Mundial Z.",
-        link: null,
+            "Pagina Web de prueba en desarrollo.",
+        link: "https://github.com/Alejost7/PageProjectMakeUp.git",
     },
     {
-        id: "gta-v",
-        title: "Bench: Grand Theft Auto V",
-        img: "/gta.jpg",
-        stack: ["msi afterburner", "Python"],
+        id: "next",
+        title: "Próximamente...",
+        img: "/presentacionProyecto.mp4",
+        stack: ["Herramientas", "Habilidades"],
         description:
-            "Pruebas de rendimiento y análisis de temperaturas jugando Grand Theft Auto V.",
+            "Próximamente se montarán más proyectos en el perfil.",
         link: null,
     }
     
