@@ -7,11 +7,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }} 
-            className="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto">
+            className="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto mt-12">
             <img
             src="/foton.jpg"
             alt="Diego"
-            className="rounded-lg w-auto h-72 object-cover border-4 border-violet-500"
+            className="rounded-lg w-auto h-72 object-cover border-4 border-gray-400 hover:scale-105 transition-transform mb-8 lg:mb-0 lg:w-1/3 lg:h-auto shadow-lg"
             />
 
             <motion.div
@@ -39,6 +39,7 @@ const Hero = () => {
                 </a>
             </div>
             </motion.div>
+            <div className="absolute top-20 left-10 w-6 h-6 bg-green-400 rounded-full animate-bounce opacity-10 blur-md z-0"></div>
         </motion.section>
     );
 }

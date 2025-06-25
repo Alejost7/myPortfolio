@@ -4,7 +4,7 @@ export default function SobreMi() {
     return (
         <section
         id="sobre-mi"
-        className="rounded-lg flex flex-col items-center bg-[#0f0f1f] bg-opacity-30 text-white py-6 px-6 max-w-6xl mx-auto mt-12"
+        className="rounded-lg flex flex-col items-center bg-[#0f0f1f] bg-opacity-30 text-white py-6 px-6 max-w-6xl mx-auto mt-32 scroll-mt-24"
         >
         <motion.h2
             initial={{ opacity: 0, y: -20 }}
@@ -32,7 +32,7 @@ export default function SobreMi() {
             <div>
                 <h3 className="text-2xl font-semibold mb-8">Habilidades</h3>
                 <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {["JavaScript", "React", "Node.js", "Python", "Git", "SQL","C++","C","POO"].map((skill) => (
+                {["JavaScript", "React", "Node.js", "Python", "Git", "SQL","C++","C","POO", "Bases de Datos", "Análisis de datos"].map((skill) => (
                     <li
                     key={skill}
                     className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm inline-block hover:bg-white/20 transition text-center"

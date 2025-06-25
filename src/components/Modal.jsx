@@ -28,9 +28,9 @@ export default function Modal({ isOpen, onClose, children }) {
                 {/* Close button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-white hover:text-gray-300"
+                    className="absolute top-1 right-4 text-white hover:text-gray-300"
                 >
-                    <X size={24} />
+                    <X size={30} />
                 </button>
 
                 {/* Aquí va el contenido dinámico */}

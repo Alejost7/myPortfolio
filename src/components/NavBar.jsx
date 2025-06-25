@@ -12,7 +12,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-gradient-to-b from-black/80 to-transparent fixed top-0 z-50 pb-4">
+        <nav className="w-full bg-gradient-to-b from-black/80 to-transparent backdrop-blur-md shadow-md fixed top-0 z-50 pb-4">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center text-white">            
             {/* Desktop nav */}
             <div className="hidden md:flex gap-9 text-sm">
@@ -20,7 +20,7 @@ export default function Navbar() {
                 <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-violet-400 transition"
+                className="hover:text-violet-400 hover:scale-150 transition"
                 >
                 {link.name}
                 </a>
@@ -43,7 +43,7 @@ export default function Navbar() {
                 animate={{ height: "auto" }}
                 exit={{ height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="overflow-hidden md:hidden px-4 bg-black/90 backdrop-blur-lg"
+                className="overflow-hidden md:hidden px-4 bg-black/50"
             >
                 <ul className="flex flex-col py-4 gap-4 text-white text-sm">
                 {links.map((link) => (

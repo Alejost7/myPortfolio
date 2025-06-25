@@ -3,7 +3,7 @@ export const projects = [
         id: "vscode",   
         title: "Aplicación Web Intercambio de Libros",
         img: "/vscode.png",
-        stack: ["React"],
+        stack: ["React, javaScript", "HTML", "CSS", "Node.js", "Express", "MongoDB"],
         description:
             "Un proyecto demo usando React y VS Code para implementar una aplicación web de intercambios de libros llamada BookSwap.",
         link: "https://github.com/Alejost7/Book-Trading",

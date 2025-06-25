@@ -10,8 +10,15 @@ const Proyectos = () => {
     const [selected, setSelected] = useState(null);
 
     return (
-        <section id="proyectos" className="mt-24 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-8">Proyectos destacados</h2>
+        <section id="proyectos" className="mt-24 max-w-6xl mx-auto scroll-mt-24">
+        <motion.h2 
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-semibold mb-8"
+        >
+            Proyectos destacados
+        </motion.h2>
         <div className="grid md:grid-cols-3 gap-16">
             {projects.map((project) => (
                 <motion.div
